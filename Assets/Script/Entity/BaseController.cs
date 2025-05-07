@@ -35,7 +35,7 @@ public class BaseController : MonoBehaviour
     
     protected virtual void Update()
     {
-        //HandleAction();
+        
         Rotate(lookDirection);
     }
 
@@ -48,7 +48,7 @@ public class BaseController : MonoBehaviour
 
     private void Movement(Vector2 direction)
     {
-        direction = direction*2; //statHandler.Speed;
+        direction = direction*2; 
 
         rb2d.velocity = direction; 
 
@@ -62,19 +62,5 @@ public class BaseController : MonoBehaviour
         characterRenderer.flipX = isFlipped;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Object"))
-        {
-             // 플레이어가 접근하면 팝업 표시
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Object"))
-        {
-             // 플레이어가 벗어나면 팝업 숨김
-        }
-    }
+   
 }

@@ -5,11 +5,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 
-public class GameManager : MonoBehaviour
+public class Flappy_GameManager : MonoBehaviour
 {
-    static GameManager gameManager;
+    static Flappy_GameManager gameManager;
 
-    public static GameManager Instance
+    public static Flappy_GameManager Instance
     {
         get { return gameManager; }
     }
@@ -54,15 +54,14 @@ public class GameManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("LastMiniGameScore", currentScore);
         
-        int bestScore = PlayerPrefs.GetInt("MiniGameScore", 0); // 저장된 최고 점수 불러오기
+        int bestScore = PlayerPrefs.GetInt("MiniGameScore", 0); 
 
         if (currentScore > bestScore)
         {
-            PlayerPrefs.SetInt("MiniGameScore", currentScore); // 최고 점수 갱신
+            PlayerPrefs.SetInt("MiniGameScore", currentScore);
            
         }
-        PlayerPrefs.Save(); // 즉시 저장
-
+        PlayerPrefs.Save();
 
 
     }

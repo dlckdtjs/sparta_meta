@@ -9,7 +9,7 @@ public class PlayerController : BaseController
     private Camera camera;
     
 
-    // Start is called before the first frame update
+    
 
 
     protected override void Start()

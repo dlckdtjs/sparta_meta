@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player_Flappy : MonoBehaviour
 {
     Animator animator = null;
     Rigidbody2D _rigidbody = null;
@@ -14,11 +14,11 @@ public class Player : MonoBehaviour
 
     public bool godMode = false;
 
-    GameManager gameManager = null;
+    Flappy_GameManager gameManager = null;
 
     void Start()
     {
-        gameManager = GameManager.Instance;
+        gameManager = Flappy_GameManager.Instance;
 
         animator = transform.GetComponentInChildren<Animator>();
         _rigidbody = transform.GetComponent<Rigidbody2D>();
